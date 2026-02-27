@@ -1,28 +1,27 @@
-Air_Quality
-Air Quality Prediction Project
+# Air Quality Prediction
 
-Problem
-Predict air quality level based on environmental features.
+## Project Description
+This repository contains an end-to-end machine learning project that predicts air quality using environmental features. It includes data analysis, preprocessing, model training with and without pipeline, and deployment with Streamlit.
 
-Dataset
-Source: Kaggle
-Rows: 10,000+
-Features: 12
-EDA
-- Handled missing values
-- Removed outliers
-- Correlation analysis
+## Project Structure
+List of folders and files.
 
-Models Used
+## Dataset
+Source of the dataset and size.
+
+## Features
+List important features.
+
+## Models
 - Linear Regression
 - Random Forest
 - XGBoost
 
-Best Model
-Random Forest with 89% accuracy
+## Results
+Best performance and evaluation metrics.
 
-Deployment
-Streamlit App included
+## How to run
+Instructions to run app.py.
 
-## 🛠 Tech Stack
-Python, Pandas, Sklearn, Streamlit
+## Tech Stack
+Python, Scikit-learn, Pandas, Streamlit.
