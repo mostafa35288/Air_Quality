@@ -12,16 +12,93 @@ Source of the dataset and size.
 ## Features
 List important features.
 
-## Models
-- Linear Regression
-- Random Forest
-- XGBoost
+Linear Model
+
+Logistic Regression
+
+Distance-Based Model
+
+K-Nearest Neighbors (KNN)
+
+Support Vector Machine
+
+Support Vector Classifier (SVC)
+
+Tree-Based Models
+
+Decision Tree
+
+Probabilistic Model
+
+Gaussian Naive Bayes
+
+Bagging-Based Ensembles
+
+Random Forest
+
+Extra Trees
+
+Boosting-Based Ensembles
+
+AdaBoost
+
+Gradient Boosting
+
+HistGradientBoosting
+
+External Boosting Libraries
+
+XGBoost
+
+LightGBM
+
+CatBoost
+
+Advanced Ensemble Techniques
+Voting Classifier
+
+Soft voting ensemble combining:
+
+Logistic Regression
+
+Random Forest
+
+Naive Bayes
+
+XGBoost
+
+Stacking Classifier
+
+Base learners:
+
+Logistic Regression
+
+Random Forest
+
+Naive Bayes
+
+LightGBM
+
+Final meta-model:
+
+XGBoost
+
+Stacking is implemented using probability outputs to improve generalization and reduce model bias.
+
+Evaluation Strategy
+
+Train/Test Split
+
 
 ## Results
-Best performance and evaluation metrics.
+Accuracy
 
-## How to run
-Instructions to run app.py.
+Precision
 
-## Tech Stack
-Python, Scikit-learn, Pandas, Streamlit.
+Recall
+
+F1-score
+
+Confusion Matrix
+
+
