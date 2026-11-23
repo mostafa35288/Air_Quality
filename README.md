@@ -1,104 +1,65 @@
 # Air Quality Prediction
 
 ## Project Description
-This repository contains an end-to-end machine learning project that predicts air quality using environmental features. It includes data analysis, preprocessing, model training with and without pipeline, and deployment with Streamlit.
+End-to-end machine learning project that predicts the air quality class from environmental features. It covers data analysis, preprocessing, model training with and without scikit-learn pipelines, and a Streamlit app for real-time predictions.
 
 ## Project Structure
-List of folders and files.
+- `Air_Quality.ipynb`: EDA, preprocessing, and the full model comparison without pipelines.
+- `Air_Quality-with pipeline.ipynb`: the same workflow rebuilt with scikit-learn pipelines.
+- `stAirPredict.py`: Streamlit app for real-time air quality predictions.
 
 ## Dataset
-Source of the dataset and size.
+Kaggle: **Air Quality and Pollution Assessment** (`mujtabamatin/air-quality-and-pollution-assessment`), file `updated_pollution_dataset.csv`. The target is `Air Quality` with 4 classes (Good, Moderate, Poor, Hazardous). Models are evaluated on a held-out test split of 1,000 rows.
 
 ## Features
-List important features.
+- Temperature
+- Humidity
+- PM2.5
+- PM10
+- NO2
+- SO2
+- CO
+- Proximity to Industrial Areas
+- Population Density
 
-Linear Model
+## Models
 
-Logistic Regression
+**Linear Model**
+- Logistic Regression
 
-Distance-Based Model
+**Distance-Based Models**
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVC)
 
-K-Nearest Neighbors (KNN)
+**Tree-Based Models**
+- Decision Tree
 
-Support Vector Machine
+**Probabilistic Models**
+- Gaussian Naive Bayes
 
-Support Vector Classifier (SVC)
+**Bagging Ensembles**
+- Random Forest
+- Extra Trees
 
-Tree-Based Models
+**Boosting Ensembles**
+- AdaBoost
+- Gradient Boosting
+- HistGradientBoosting
+- XGBoost
+- LightGBM
+- CatBoost
 
-Decision Tree
+**Advanced Ensembles**
+- Voting Classifier (soft voting: Logistic Regression + Random Forest + Naive Bayes + XGBoost)
+- Stacking Classifier (Logistic Regression + Random Forest + Naive Bayes + LightGBM, with XGBoost as the meta-model, using probability outputs)
 
-Probabilistic Model
-
-Gaussian Naive Bayes
-
-Bagging-Based Ensembles
-
-Random Forest
-
-Extra Trees
-
-Boosting-Based Ensembles
-
-AdaBoost
-
-Gradient Boosting
-
-HistGradientBoosting
-
-External Boosting Libraries
-
-XGBoost
-
-LightGBM
-
-CatBoost
-
-Advanced Ensemble Techniques
-Voting Classifier
-
-Soft voting ensemble combining:
-
-Logistic Regression
-
-Random Forest
-
-Naive Bayes
-
-XGBoost
-
-Stacking Classifier
-
-Base learners:
-
-Logistic Regression
-
-Random Forest
-
-Naive Bayes
-
-LightGBM
-
-Final meta-model:
-
-XGBoost
-
-Stacking is implemented using probability outputs to improve generalization and reduce model bias.
-
-Evaluation Strategy
-
-Train/Test Split
-
+## Evaluation
+Train/test split with accuracy, precision, recall, F1-score, confusion matrix, and multiclass ROC-AUC.
 
 ## Results
-Accuracy
+The strongest models (boosting and stacking ensembles) reach about **0.996 ROC-AUC** and around **96% test accuracy** on the held-out test split.
 
-Precision
-
-Recall
-
-F1-score
-
-Confusion Matrix
-
-
+## Run the Streamlit app
+```bash
+streamlit run stAirPredict.py
+```
